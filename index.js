@@ -5,47 +5,46 @@
  *
  */
 module.exports = {
-  parser: "babel-eslint",
-  extends: ["airbnb", "prettier", "prettier/react"],
-  plugins: ["jest", "prettier"],
-  env: {
-    browser: true,
-    meteor: true,
-    node: true
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "meteor": true,
+    "node": true
   },
-  ecmaFeatures: {
-    arrowFunctions: true,
-    blockBindings: true,
-    classes: true,
-    defaultParams: true,
-    destructuring: true,
-    forOf: true,
-    generators: false,
-    modules: true,
-    objectLiteralComputedProperties: true,
-    objectLiteralDuplicateProperties: false,
-    objectLiteralShorthandMethods: true,
-    objectLiteralShorthandProperties: true,
-    restParams: true,
-    spread: true,
-    superInFunctions: true,
-    templateStrings: true,
-    jsx: true
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "destructuring": true,
+    "forOf": true,
+    "generators": false,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": false,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "restParams": true,
+    "spread": true,
+    "superInFunctions": true,
+    "templateStrings": true,
+    "jsx": true
   },
-  rules: {
+  "rules": {
     /**
      * Meteor Specific
      */
     // babel inserts "use strict"; for us
     // http://eslint.org/docs/rules/strict
-    strict: [2, "never"],
+    "strict": [2, "never"],
 
     // allows certain non-constructor functions to start with a capital letter
     "new-cap": [
       2,
       {
         // http://eslint.org/docs/rules/new-cap
-        capIsNewExceptions: [
+        "capIsNewExceptions": [
           "Match",
           "Any",
           "Object",
@@ -85,8 +84,8 @@ module.exports = {
       2,
       {
         // http://eslint.org/docs/rules/no-unused-vars
-        vars: "local",
-        args: "after-used"
+        "vars": "local",
+        "args": "after-used"
       }
     ],
     "no-use-before-define": [2, "nofunc"], // http://eslint.org/docs/rules/no-use-before-define
@@ -122,16 +121,16 @@ module.exports = {
      * Best practices
      */
     "consistent-return": 2, // http://eslint.org/docs/rules/consistent-return
-    curly: 0, // http://eslint.org/docs/rules/curly
+    "curly": 0, // http://eslint.org/docs/rules/curly
     "default-case": 2, // http://eslint.org/docs/rules/default-case
     "dot-notation": [
       2,
       {
         // http://eslint.org/docs/rules/dot-notation
-        allowKeywords: true
+        "allowKeywords": true
       }
     ],
-    eqeqeq: 2, // http://eslint.org/docs/rules/eqeqeq
+    "eqeqeq": 2, // http://eslint.org/docs/rules/eqeqeq
     "guard-for-in": 2, // http://eslint.org/docs/rules/guard-for-in
     "max-len": [
       1,
@@ -139,8 +138,8 @@ module.exports = {
       2,
       {
         // http://eslint.org/docs/rules/max-len
-        ignoreUrls: true,
-        ignorePattern: "['\"]"
+        "ignoreUrls": true,
+        "ignorePattern": "['\"]"
       }
     ],
     "no-caller": 2, // http://eslint.org/docs/rules/no-caller
@@ -174,40 +173,52 @@ module.exports = {
     "no-sequences": 2, // http://eslint.org/docs/rules/no-sequences
     "no-throw-literal": 2, // http://eslint.org/docs/rules/no-throw-literal
     "no-with": 2, // http://eslint.org/docs/rules/no-with
-    radix: 2, // http://eslint.org/docs/rules/radix
+    "radix": 2, // http://eslint.org/docs/rules/radix
     "vars-on-top": 0, // http://eslint.org/docs/rules/vars-on-top
     "wrap-iife": [2, "any"], // http://eslint.org/docs/rules/wrap-iife
-    yoda: 2, // http://eslint.org/docs/rules/yoda
+    "yoda": 2, // http://eslint.org/docs/rules/yoda
 
     /**
      * Style
      */
-    indent: [2, 2], // http://eslint.org/docs/rules/indent
+    "indent": [2, 2], // http://eslint.org/docs/rules/indent
     "brace-style": [
       1, // http://eslint.org/docs/rules/brace-style
       "1tbs",
       {
-        allowSingleLine: true
+        "allowSingleLine": true
       }
     ],
-    quotes: [
+    "quotes": [
       1,
       "single",
       "avoid-escape" // http://eslint.org/docs/rules/quotes
     ],
-    camelcase: [
+
+    "prettier/prettier": [
+      // Prettier config
+      "error",
+      {
+        "trailingComma": "es6",
+        "singleQuote": true,
+        "printWidth": 120
+      }
+    ],
+    "plugins": ["prettier"],
+
+    "camelcase": [
       2,
       {
         // http://eslint.org/docs/rules/camelcase
-        properties: "never"
+        "properties": "never"
       }
     ],
     "comma-spacing": [
       2,
       {
         // http://eslint.org/docs/rules/comma-spacing
-        before: false,
-        after: true
+        "before": false,
+        "after": true
       }
     ],
     "comma-style": [2, "last"], // http://eslint.org/docs/rules/comma-style
@@ -218,8 +229,8 @@ module.exports = {
       2,
       {
         // http://eslint.org/docs/rules/key-spacing
-        beforeColon: false,
-        afterColon: true
+        "beforeColon": false,
+        "afterColon": true
       }
     ],
     "new-parens": 1, // http://eslint.org/docs/rules/new-parens
@@ -227,7 +238,7 @@ module.exports = {
       2,
       {
         // http://eslint.org/docs/rules/no-multiple-empty-lines
-        max: 2
+        "max": 2
       }
     ],
     "no-nested-ternary": 2, // http://eslint.org/docs/rules/no-nested-ternary
@@ -239,13 +250,13 @@ module.exports = {
     "no-underscore-dangle": 0, // http://eslint.org/docs/rules/no-underscore-dangle
     "one-var": 0, // http://eslint.org/docs/rules/one-var
     "padded-blocks": [2, "never"], // http://eslint.org/docs/rules/padded-blocks
-    semi: [2, "always"], // http://eslint.org/docs/rules/semi
+    "semi": [2, "always"], // http://eslint.org/docs/rules/semi
     "semi-spacing": [
       2,
       {
         // http://eslint.org/docs/rules/semi-spacing
-        before: false,
-        after: true
+        "before": false,
+        "after": true
       }
     ],
     "space-after-keywords": 2, // http://eslint.org/docs/rules/space-after-keywords
@@ -260,4 +271,4 @@ module.exports = {
     "space-unary-ops": 0, // http://eslint.org/docs/rules/space-unary-ops
     "spaced-comment": 2 // http://eslint.org/docs/rules/spaced-comment
   }
-};
+}

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-enliven",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,9 @@
     "eslint": "^5.12.1",
     "eslint-config-prettier": "3.6.0",
     "prettier": "1.16.1"
+  },
+  "peerDependencies": {
+    "eslint": ">= 3"
   },
   "description": ""
 }
