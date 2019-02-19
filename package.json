@@ -2,17 +2,25 @@
   "name": "eslint-config-enliven",
   "version": "1.0.2",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "prettier.config.js",
+    "prettier.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carl Brunngård",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-prettier": "^3.0.1"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.12.1",
+    "eslint": "^5.14.1",
     "eslint-config-prettier": "3.6.0",
-    "prettier": "1.16.1"
+    "prettier": "^1.16.4"
   },
   "peerDependencies": {
     "eslint": ">= 3"
